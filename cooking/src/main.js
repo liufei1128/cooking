@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import Common from './common'
 
-Vue.config.productionTip = false
+Vue.use(Common);
 
 new Vue({
   router,
