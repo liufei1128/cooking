@@ -10,11 +10,11 @@ export default {
   data() {
     return {
       tabList:[
-        {title:'首页',iconName:'wap-home', path:'/home'},
-        {title:'分类',iconName:'qr', path:'/category'},
-        {title:'优惠',iconName:'coupon-o', path:'/discount'},
-        {title:'购物车',iconName:'shopping-cart-o', path:'/cart'},
-        {title:'我的',iconName:'manager-o', path:'/mine'},
+        {title:'首页',iconName:'cook-shouyedianpujishishangcheng', path:'/home'},
+        {title:'分类',iconName:'cook-fenlei', path:'/category'},
+        {title:'优惠',iconName:'cook-weibiaoti-', path:'/discount'},
+        {title:'购物车',iconName:'cook-icon-', path:'/cart'},
+        {title:'我的',iconName:'cook-wode', path:'/mine'},
       ]
     }
   },

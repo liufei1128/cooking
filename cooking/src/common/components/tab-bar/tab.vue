@@ -1,12 +1,12 @@
 <template>
-    <nav class="nav-tab">
+    <nav class="nav-tab border-top">
             <ul class="tab">
                 <li v-for="item in info" :key="item.index">
                     <router-link :to="item.path">
-                            <van-icon :name="item.iconName" />
+                            <!-- <van-icon :name="item.iconName" /> -->
+                            <i class="iconfont" :class="item.iconName"></i>
                             <span>{{item.title}}</span>
-                    </router-link>
-                  
+                    </router-link> 
                 </li>
             </ul>
     </nav>
@@ -36,7 +36,10 @@ export default {
            a{
                display: flex;
                flex-direction: column;
+               justify-content: space-around;
+               align-items: center;
                color: #222222 ;
+               height: 100%;
                 span{
                     font-size: 0.2rem;
                     text-align:center;
