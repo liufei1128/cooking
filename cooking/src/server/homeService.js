@@ -17,5 +17,36 @@ export function getHomeNav(){
             resolve(data);
         })
     })
-    
+}
+// 首页活动数据
+export function getHomeAction(){
+    return new Promise((resolve,reject)=>{
+        FetchGet(api.HOME_HUODONG_URL)
+        .then(data=>{
+            // console.log(data);
+            resolve(data);
+        })
+    })
+   
+}
+// 首页美烹好食数据
+export function getHomeGoods(){
+    return new Promise((resolve,reject)=>{
+        FetchGet(api.HOME_GOODS_URL)
+        .then(data=>{
+            console.log(data);
+            resolve(data);
+        })
+    }) 
+}
+
+// 首页明星等数据
+export function getHomeShoppingList(){
+    return new Promise((resolve,reject)=>{
+        FetchGet(api.HOME_SHOPPINGLIST_URL)
+        .then(data=>{
+            // console.log(data);
+            resolve(data);
+        })
+    }) 
 }

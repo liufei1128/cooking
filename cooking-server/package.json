@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "jsdm": "^0.5.1"
+  },
+  "devDependencies": {
+    "mockjs": "^1.0.1-beta3"
   }
 }

@@ -48,13 +48,8 @@
  }
  a{
      color: #000000;
-     /* text-decoration: none; */
+     text-decoration: none;
  }
- html,
- body {
-     width: 100%;
- }
- 
  .clearFix:after{
      content: " ";
      display: block;
@@ -62,4 +57,7 @@
      text-overflow: hidden;
      height: 0;
      visibility:hidden;
+ }
+ li{
+     list-style: none;
  }

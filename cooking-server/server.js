@@ -1,12 +1,14 @@
 const express = require('express');
 const api = require('./api/api');
 const url = require('url');
+var Mock = require('mockjs');
+var Random = Mock.Random;
 // const { JSDOM } = require("jsdom");
 // const axios = require('axios');
 
 const app = express();
 
-app.get(api.CATE_LIST_URL,(rep,res)=>{
+app.get(api.CATE_LIST_URL,(req,res)=>{
     let result = require("./data/homeHeader.json");
     res.json({
        status:0,
@@ -14,7 +16,36 @@ app.get(api.CATE_LIST_URL,(rep,res)=>{
        data:result
     });
 })
+app.get(api.HOME_HUODONG_URL,(req,res)=>{
+    let result = require("./data/action.json");
+    res.json(result);
+});
+// 首页美烹好食
+app.get(api.HOME_GOODS_URL,(req,res)=>{
+    let result = require("./data/goods.json");
+    res.json(result);
+});
+//获取明星产品等数据
+app.get(api.HOME_SHOPPINGLIST_URL,(req,res)=>{
+    let data = Mock.mock({
+        "data|8":[{
+            "id|+1":1,
+            'title':'@ctitle(4)',
+            "data|4":[{
+                "src":Random.image("328X350",'@color'),
+                "new_price":'@float(0,1000,1,2)',
+                "old_price":'@float(0, 100, 1, 2)',
+                "title":"@ctitle(1,10)",
+                "number":"@integer(1, 1000)"
+            }]
 
+        }]
+    });
+    // console.log(data);
+
+    res.json(data);
+    
+});
 //分类列表
 // app.get(api.CATE_LIST_URL, (req, res)=>{
 //     JSDOM.fromURL("http://m.you.163.com/", {runScripts: 'dangerously'}).then(dom => {

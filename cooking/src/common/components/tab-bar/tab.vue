@@ -3,7 +3,6 @@
             <ul class="tab">
                 <li v-for="item in info" :key="item.index">
                     <router-link :to="item.path">
-                            <!-- <van-icon :name="item.iconName" /> -->
                             <i class="iconfont" :class="item.iconName"></i>
                             <span>{{item.title}}</span>
                     </router-link> 
@@ -32,7 +31,6 @@ export default {
        display: flex;
        li{
            flex: 1;
-           
            a{
                display: flex;
                flex-direction: column;
